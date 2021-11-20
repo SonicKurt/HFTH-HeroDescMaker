@@ -4,7 +4,7 @@ Date: 20 November 2021
 
 © Copyright Holidays For The Heroes, Kurt Campbell. All rights reserved.
 
-The Hero Description Maker is a Python program that generates hero descriptions from a given csv file or user inputs. A hero description will be used for the hero's picture on the [Gallery](https://www.holidaysfortheheroes.org/gallery) for the website.
+The Hero Description Maker is a Python program that generates hero descriptions from a given csv file or user inputs. A hero description will be used for the hero's picture on the website's [Gallery](https://www.holidaysfortheheroes.org/gallery).
 
 ## Option 1 - Generating hero descriptions from a csv file
 If you have a csv file filled with the hero's credentials, you can specify the filename of the csv and it will automatically generate all the hero descriptions to be printed to the terminal screen and stored in results.txt.
