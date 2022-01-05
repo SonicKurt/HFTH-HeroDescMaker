@@ -47,10 +47,12 @@ def location_filler(location):
     return ""
     
 def holiday_filler(holiday_name):
-    if holiday_name == "" or holiday_name == "holidays":
-        return "the holidays"
-    
-    return holiday_name
+    if holiday_name == "holidays":
+        return " for the holidays"
+    elif holiday_name == "":
+        return ""
+    else:
+        return f" for{holiday_name}"
 
 results_file = open("results.txt", "a")
 another_hero = "Y"
@@ -81,7 +83,7 @@ while choice != "3":
                 holiday_name = hero[5]
                 holiday_name = holiday_filler(holiday_name)
 
-                hero_desc = f"Meet {hero_name}! {gender} is an {branch}{based_name} and went home{location} for {holiday_name}!\n"
+                hero_desc = f"Meet {hero_name}! {gender} is an {branch}{based_name} and went home{location}{holiday_name}!\n"
                 results_file.write(hero_desc)
                 print(hero_desc.strip())
             print(f"\nGenerated all hero desciptions from {filename} and stored in results.txt")
