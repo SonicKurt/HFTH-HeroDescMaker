@@ -9,6 +9,9 @@ hero descriptions for each hero in the gallery on the website.
 Author: Kurt Campbell
 Date: 20 November 2021
 
+Modifications:
+    2022-01-04 - Added condition statements within holiday_filler method
+
 © Copyright Holidays For The Heroes, Kurt Campbell.
 All rights reserved.
 """
