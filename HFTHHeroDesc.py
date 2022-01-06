@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Holidays For The Heroes Hero Desciption Maker
+Holidays For The Heroes Hero Description Maker
 
 Summary: A program that can take in a csv file or inputs to generate
 hero descriptions for each hero in the gallery on the website.
