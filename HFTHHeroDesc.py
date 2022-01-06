@@ -107,7 +107,8 @@ while choice != "3":
 
                 hero_desc = f"Meet {hero_name}! {gender} was our {mission_str} mission. {gender} is an {branch}{based_name} and went home{location}{holiday_name}!\n"
                 results_file.write(hero_desc)
-                print(hero_desc.strip())
+                # DEBUGGING PURPOSES
+                #print(hero_desc.strip())
             print(f"\nGenerated hero desciptions given the information from {filename}.\nThey are stored in results.txt")
             choice = pick_option()
         except FileNotFoundError:
