@@ -12,6 +12,11 @@ Date: 20 November 2021
 Modifications:
     2022-01-04 - Added condition statements within holiday_filler method
     2022-01-06 - Implemented method for how the mission should be printed
+    2022-08-23 - Removed the mission sentence since stating the mission in an
+                 hero's statement is unnecessary. Therefore, the mission filler
+                 method, variables that store the hero's mission
+                 number and sentence, and mission count from csv option has been
+                 removed. 
 
 © Copyright Holidays For The Heroes, Kurt Campbell.
 All rights reserved.
@@ -21,9 +26,9 @@ import csv
 
 def pick_option():
     print("Please pick an option:")
-    print("1 - Generate hero descriptions from a csv file")
-    print("2 - Input hero credentials to generate descriptions")
-    print("3 - Exit the program")
+    print("1 - Generate hero descriptions from a csv file.")
+    print("2 - Input hero credentials to generate descriptions.")
+    print("3 - Exit the program.")
     return input("Enter your option: ")
 
 def branch_filler(branch):
@@ -58,22 +63,8 @@ def holiday_filler(holiday_name):
     else:
         return f" for {holiday_name}"
 
-def mission_filler(mission_num):
-    remainder = int(mission_num) % 10
-    if remainder == 1:
-        return f"{mission_num}st"
-    elif remainder == 2:
-        return f"{mission_num}nd"
-    elif remainder == 3:
-        return f"{mission_num}rd"
-    else:
-        return f"{mission_num}th"
-
-
 results_file = open("results.txt", "a")
 another_hero = "Y"
-mission_count = 0
-mission_str = ""
 
 print("Holidays For The Heroes Hero Description Maker")
 
@@ -102,10 +93,7 @@ while choice != "3":
                 holiday_name = hero[5]
                 holiday_name = holiday_filler(holiday_name)
 
-                mission_count += 1
-                mission_str = mission_filler(mission_count)
-
-                hero_desc = f"Meet {hero_name}! {gender} was our {mission_str} mission. {gender} is an {branch}{based_name} and went home{location}{holiday_name}!\n"
+                hero_desc = f"Meet {hero_name}! {gender} is an {branch}{based_name} and went home{location}{holiday_name}!\n"
                 results_file.write(hero_desc)
                 # DEBUGGING PURPOSES
                 #print(hero_desc.strip())
@@ -116,7 +104,7 @@ while choice != "3":
             choice = pick_option()
     elif choice == "2":
         while another_hero == "Y":
-            print("Please enter the hero's name, branch, location")
+            print("Please enter the hero's information.")
             # Essential inputs for a hero description.
             hero_name = input("Name: ")
 
@@ -126,13 +114,6 @@ while choice != "3":
             else:
                 gender = "She"
             
-            mission_count = input("Mission Number: ")
-            while not mission_count.isdigit():
-                print("You entered a non-numerical value. Please enter a number.")
-                mission_count = input("Mission Number: ")
-            
-            mission_str = mission_filler(mission_count)
-
             branch = input("Branch (1-Army, 2-Air Force, 3-Navy," + 
                 "4-Coast Guard, 5-Marine): ").capitalize()
 
@@ -147,11 +128,13 @@ while choice != "3":
             holiday_name = input("Holidays: ")
             holiday_name = holiday_filler(holiday_name)
             
-            hero_desc = f"Meet {hero_name}! {gender} was our {mission_str} mission. {gender} is an {branch}{based_name} and went home{location}{holiday_name}!\n"
+            hero_desc = f"Meet {hero_name}! {gender} is an {branch}{based_name} and went home{location}{holiday_name}!\n"
                   
             print(hero_desc)
 
             results_file.write(hero_desc)
+
+            print("Created hero description and stored in results.txt")
 
             another_hero = input("Want to enter another hero (Y/N)? ").upper()
         choice = "3"
