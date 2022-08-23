@@ -16,7 +16,10 @@ Modifications:
                  hero's statement is unnecessary. Therefore, the mission filler
                  method, variables that store the hero's mission
                  number and sentence, and mission count from csv option has been
-                 removed. 
+                 removed.
+
+                 Added space between the Navy and Coast Guard within the branch prompt
+                 when user enters the information manually. 
 
 © Copyright Holidays For The Heroes, Kurt Campbell.
 All rights reserved.
@@ -93,8 +96,8 @@ while choice != "3":
                 holiday_name = hero[5]
                 holiday_name = holiday_filler(holiday_name)
 
-                hero_desc = f"Meet {hero_name}! {gender} is an {branch}{based_name} and went home{location}{holiday_name}!\n"
-                results_file.write(hero_desc)
+                hero_desc = f"Meet {hero_name}! {gender} is an {branch}{based_name} and went home{location}{holiday_name}!"
+                results_file.write(hero_desc + "\n")
                 # DEBUGGING PURPOSES
                 #print(hero_desc.strip())
             print(f"\nGenerated hero desciptions given the information from {filename}.\nThey are stored in results.txt")
@@ -114,7 +117,7 @@ while choice != "3":
             else:
                 gender = "She"
             
-            branch = input("Branch (1-Army, 2-Air Force, 3-Navy," + 
+            branch = input("Branch (1-Army, 2-Air Force, 3-Navy, " + 
                 "4-Coast Guard, 5-Marine): ").capitalize()
 
             branch = branch_filler(branch)
@@ -128,11 +131,11 @@ while choice != "3":
             holiday_name = input("Holidays: ")
             holiday_name = holiday_filler(holiday_name)
             
-            hero_desc = f"Meet {hero_name}! {gender} is an {branch}{based_name} and went home{location}{holiday_name}!\n"
-                  
+            hero_desc = f"Meet {hero_name}! {gender} is an {branch}{based_name} and went home{location}{holiday_name}!"
+
             print(hero_desc)
 
-            results_file.write(hero_desc)
+            results_file.write(hero_desc + "\n")
 
             print("Created hero description and stored in results.txt")
 
