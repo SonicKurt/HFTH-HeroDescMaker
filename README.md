@@ -1,6 +1,7 @@
 # Holidays For The Heroes Hero Description Maker
 Author: Kurt Campbell<br>
 Date: 20 November 2021
+Modified: 30 August 2022
 
 © Copyright Holidays For The Heroes, Kurt Campbell. All rights reserved.
 
@@ -18,7 +19,9 @@ If no location or based is specified, please leave them blank (i.e., "Name,Gende
 If no holiday is specified, please enter "holidays" (without double quotations) for that field.
 
 ## Option 2 - Input hero credentials to generate descriptions
-You have the option of entering the hero's credentials by inputting directly within your Python console or terminal.
+You have the option of entering the hero's credentials by inputting directly within your Python console or terminal. Theinformation you will need is the hero's name, gender, branch, their destination location, base location, and holiday. The required fields are their name, gender, and branch. The destination location, base location, and holiday are optional.
+
+Once you entered the hero's information, the generated sentence will be stored in results.txt.
 
 Input Shortcuts:
 
@@ -31,4 +34,7 @@ Branch<br>
 2 - Air Force<br>
 3 - Navy<br>
 4 - Coast Guard<br>
-5 - Marine<br>
+5 - Marine
+
+Holidays<br>
+holidays - " for the holidays"<br>
