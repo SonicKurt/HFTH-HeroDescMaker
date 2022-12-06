@@ -96,7 +96,7 @@ while choice != "3":
                 holiday_name = hero[5]
                 holiday_name = holiday_filler(holiday_name)
 
-                hero_desc = f"Meet {hero_name}! {gender} is an {branch}{based_name} and went home{location}{holiday_name}!"
+                hero_desc = f"Meet {hero_name}! {gender} is a {branch}{based_name} and went home{location}{holiday_name}!"
                 results_file.write(hero_desc + "\n")
                 # DEBUGGING PURPOSES
                 #print(hero_desc.strip())
@@ -131,7 +131,7 @@ while choice != "3":
             holiday_name = input("Holidays: ")
             holiday_name = holiday_filler(holiday_name)
             
-            hero_desc = f"Meet {hero_name}! {gender} is an {branch}{based_name} and went home{location}{holiday_name}!"
+            hero_desc = f"Meet {hero_name}! {gender} is a {branch}{based_name} and went home{location}{holiday_name}!"
 
             print(hero_desc)
 
