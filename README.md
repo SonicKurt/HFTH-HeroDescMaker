@@ -1,7 +1,8 @@
 # Holidays For The Heroes Hero Description Maker
 Author: Kurt Campbell<br>
-Date: 20 November 2021
-Modified: 30 August 2022
+Date: 20 November 2021<br>
+Modified: 14 June 2023
+Version: 1.6
 
 © Copyright Holidays For The Heroes, Kurt Campbell. All rights reserved.
 
