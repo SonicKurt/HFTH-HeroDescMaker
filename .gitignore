@@ -1,2 +1,6 @@
 # Vim Temporary Files
 *~
+
+# Hero Record File Extensions
+*.txt
+*.csv
