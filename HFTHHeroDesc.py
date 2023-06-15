@@ -8,6 +8,7 @@ hero descriptions for each hero in the gallery on the website.
 
 Author: Kurt Campbell
 Date: 20 November 2021
+Version: 1.6
 
 Modifications:
     2022-01-04 - Added condition statements within holiday_filler method
@@ -52,9 +53,9 @@ def based_filler(based_name):
     
     return ""
 
-def location_filler(location):
-    if location != "":
-        return f" to {location}"
+def dest_filler(dest):
+    if dest != "":
+        return f" to {dest}"
     
     return ""
     
@@ -87,8 +88,8 @@ while choice != "3":
                 branch = hero[2]
                 branch = branch_filler(branch)
 
-                location = hero[3]
-                location = location_filler(location)
+                dest = hero[3]
+                dest = dest_filler(dest)
 
                 based_name = hero[4]
                 based_name = based_filler(based_name)
@@ -96,7 +97,7 @@ while choice != "3":
                 holiday_name = hero[5]
                 holiday_name = holiday_filler(holiday_name)
 
-                hero_desc = f"Meet {hero_name}! {gender} is a {branch}{based_name} and went home{location}{holiday_name}!"
+                hero_desc = f"Meet {hero_name}! {gender} is a {branch}{based_name} and went home{dest}{holiday_name}!"
                 results_file.write(hero_desc + "\n")
                 # DEBUGGING PURPOSES
                 #print(hero_desc.strip())
@@ -122,8 +123,8 @@ while choice != "3":
 
             branch = branch_filler(branch)
 
-            location = input("Location: ")
-            location = location_filler(location)
+            dest = input("Destination: ")
+            dest = dest_filler(dest)
 
             based_name = input("Based: ")
             based_name = based_filler(based_name)
@@ -131,7 +132,7 @@ while choice != "3":
             holiday_name = input("Holidays: ")
             holiday_name = holiday_filler(holiday_name)
             
-            hero_desc = f"Meet {hero_name}! {gender} is a {branch}{based_name} and went home{location}{holiday_name}!"
+            hero_desc = f"Meet {hero_name}! {gender} is a {branch}{based_name} and went home{dest}{holiday_name}!"
 
             print(hero_desc)
 
